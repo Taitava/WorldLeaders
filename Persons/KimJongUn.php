@@ -65,7 +65,7 @@ class KimJongUn extends Person
 	{
 		switch ($send_to)
 		{
-		case NortKorea::class:
+		case NorthKorea::class:
 			return false;
 		case Japan::class:
 			return true;
