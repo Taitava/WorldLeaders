@@ -3,6 +3,8 @@
 
 class DonaldTrump extends Person
 {
+	public static $lies_and_half_truths_counter = 10000;
+	
 	/**
 	 * @param int $count A number as high as possible
 	 * @param string $unit Either 'tweets', 'phone calls' or 'press conferences'.
@@ -55,6 +57,16 @@ class DonaldTrump extends Person
 			$this->tweet("Fake news! Fake media! Fake results!");
 			$this->sayTo(VladimirPutin::class, "Why didn't you vote for me?!?!");
 		break;
+		}
+	}
+	
+	public function tweet($message)
+	{
+		parent::tweet($message);
+		
+		if (rand(0, 1) === 1) // 50 % probability
+		{
+			static::$lies_and_half_truths_counter++;
 		}
 	}
 }
