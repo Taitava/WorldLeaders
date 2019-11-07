@@ -39,6 +39,11 @@ class Person
 		return new PhoneCall($this, $to);
 	}
 	
+	public function whisperTo($to, $message)
+	{
+	
+	}
+	
 	/**
 	 * Can be used to express external references to certain sentences said by a given Person.
 	 *
